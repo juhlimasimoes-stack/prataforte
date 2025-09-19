@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRATA FORTE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body { 
+    font-family: 'Montserrat', sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background: url('https://png.pngtree.com/thumb_back/fh260/background/20240810/pngtree-laser-welding-machine-is-operating-on-the-metal-sheet-sparks-flying-image_16151088.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    color: #fff; 
+  }
+
+  /* Topo superior com contato */
+  .topo-contato {
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 20px;
+    font-size: 0.9em;
+    gap: 15px;
+    position: fixed;
+    width: 100%;
+    z-index: 1001;
+  }
+  .topo-contato a {
+    color: #F1C40F;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  .topo-contato a:hover { color: #D9534F; }
+  .topo-contato .btn-wpp {
+    background: #25D366;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  .topo-contato .btn-wpp:hover { background: #1ebe57; }
+
+  /* Header */
+  header { 
+    background: rgba(0,0,0,0.8);
+    color: #fff; 
+    padding: 120px 20px 40px 20px;
+    text-align: center;
+  }
+  .logo {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .logo img {
+    max-width: 200px;
+    margin-top: 10px;
+  }
+
+  /* Menu */
+  nav { 
+    background: rgba(0,0,0,0.85); 
+    padding: 10px; 
+    text-align: center; 
+    position: sticky; 
+    top: 40px; 
+    z-index: 1000; 
+  }
+  nav a { 
+    color: #fff; 
+    margin: 0 15px; 
+    text-decoration: none; 
+    font-weight: 700; 
+    transition: color 0.3s;
+  }
+  nav a:hover { 
+    color: #F1C40F; 
+  }
+
+  /* Seções */
+  section { 
+    padding: 60px 20px; 
+    text-align: center; 
+    background: rgba(0, 0, 0, 0.9);
+    margin: 20px;
+    border-radius: 12px;
+  }
+  h1, h2 { 
+    color: #D9534F; 
+    font-weight: 700;
+  }
+
+  /* Produtos */
+  .produtos-container { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px; 
+  }
+  .produto { 
+    background: #111; 
+    border: 1px solid #D9534F; 
+    border-radius: 10px; 
+    padding: 20px; 
+    margin: 20px auto; 
+    max-width: 300px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.8);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .produto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.9);
+  }
+  .produto img { 
+    width: 100%; 
+    border-radius: 8px; 
+  }
+  .produto h3 { 
+    margin: 15px 0 10px; 
+    color: #F1C40F;
+  }
+  .produto p {
+    color: #fff;
+  }
+
+  /* Botão */
+  .btn { 
+    display: inline-block; 
+    background: #D9534F; 
+    color: white; 
+    padding: 12px 25px; 
+    border-radius: 50px; 
+    text-decoration: none; 
+    margin-top: 15px;
+    font-weight: 700;
+    transition: background 0.3s;
+  }
+  .btn:hover { 
+    background: #b12d2a; 
+  }
+
+  /* Footer */
+  footer { 
+    background: #000; 
+    color: #bbb; 
+    padding: 20px; 
+    text-align: center; 
+    margin-top: 40px; 
+  }
+  footer a {
+    color: #F1C40F;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  /* WhatsApp flutuante */
+  .wpp-flutuante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1002;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    transition: background 0.3s, transform 0.3s;
+  }
+  .wpp-flutuante:hover {
+    background: #1ebe57;
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px){
+    nav a { margin: 0 10px; }
+    header { padding-top: 150px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Topo fixo -->
+  <div class="topo-contato">
+    <span>📞 (19) 97166-7714</span>
+    <a class="btn-wpp" href="https://wa.me/5519971667714?text=Olá,%20gostaria%20de%20mais%20informações" target="_blank">WhatsApp</a>
+    <span>✉️ <a href="mailto:Gi_bian@hotmail.com">Gi_bian@hotmail.com</a></span>
+  </div>
+
+  <!-- Header com logo -->
+  <header>
+    <div class="logo">
+      <span style="color:#fff;">PRATA</span><span style="color:#D9534F;"> FORTE</span>
+      <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc1Z9O_JYl-5qF8c3MQsTiMd8AGyCukSvEug&s" alt="Logo PRATA FORTE"></div>
+    </div>
+    <p>Fornecemos soluções completas em soldagem com ligas de prata e materiais de alto desempenho para profissionais exigentes.</p>
+    <p style="font-weight:bold; color:#F1C40F; margin-top:10px;">📦 Entregamos com segurança para todo o Brasil</p>
+  </header>
+
+  <!-- Navegação -->
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#quem-somos">Quem Somos</a>
+    <a href="#vantagens">Vantagens</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <!-- Seções -->
+  <section id="inicio">
+    <h2>Bem-vindo(a)</h2>
+    <p>Explore nossas soluções em soldagem profissional e descubra produtos confiáveis e de alta performance para o seu trabalho.</p>
+  </section>
+
+  <section id="quem-somos">
+    <h2>Quem Somos</h2>
+    <p>Na PRATA FORTE, somos especialistas em materiais de soldagem de prata e ligas especiais, oferecendo qualidade, confiabilidade e suporte técnico especializado para profissionais e indústrias.</p>
+  </section>
+
+  <section id="vantagens">
+    <h2>Por que escolher a PRATA FORTE?</h2>
+    <p>✔️ Materiais de soldagem de alta performance<br>
+       ✔️ Preços justos e competitivos<br>
+       ✔️ Atendimento direto e personalizado pelo WhatsApp<br>
+       ✔️ Entrega rápida e segura em todo o Brasil<br>
+       <span style="color:#F1C40F; font-weight:bold;">📦 Seu pedido chega com segurança em qualquer lugar do país</span></p>
+  </section>
+
+  <section id="produtos">
+    <h2>Nossos Produtos</h2>
+    <div class="produtos-container">
+
+      <div class="produto">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1y2n92Hx9Qixr_haLe4kEFSa5FAi7naplMw&s" alt="Vareta de Solda Prata">
+        <h3>Vareta de Solda Prata</h3>
+        <p>Ideal para brasagem em cobre, latão e aço inox. Alta resistência mecânica, excelente condutividade térmica e acabamento limpo.</p>
+        <a class="btn" href="https://wa.me/5519971667714?text=Olá,%20tenho%20interesse%20na%20Vareta%20de%20Solda%20Prata" target="_blank">Comprar no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <img src="https://acdn-us.mitiendanube.com/stores/004/605/722/products/1553d8ecc87249539fc59f976de5606b2fproduct2fimages2f42250102f7e120cc3d8e346cf84875110964b0ddf-c6bff2bc95ca12fff017465393396424-1024-1024.png" alt="Lâmina de Solda Prata">
+        <h3>Lâmina de Solda Prata</h3>
+        <p>Lâmina de liga de prata (ex: 35%) para brasagem de alta qualidade. Excelente fluidez, união forte e resistente para juntas finas.</p>
+        <a class="btn" href="https://wa.me/5519971667714?text=Olá,%20tenho%20interesse%20na%20Lâmina%20de%20Solda%20Prata" target="_blank">Comprar no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRd6_2cAO0No8m59W9ZSccOWale9cTPqCVaA&s" alt="Foscoper">
+        <h3>Foscoper</h3>
+        <p>Liga de cobre com fósforo e prata, muito utilizada em refrigeração e ar-condicionado. Excelente para unir cobre com cobre ou cobre com latão.</p>
+        <a class="btn" href="https://wa.me/5519971667714?text=Olá,%20tenho%20interesse%20no%20Foscoper" target="_blank">Comprar no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <img src="https://images.tcdn.com.br/img/img_prod/694151/fluxo_para_solda_em_po_pro_safety_250_gramas_30392_2_24d0f74f4ed30ae77a0c496c38f6aebc.png" alt="Fluxo de Solda Prata">
+        <h3>Fluxo de Solda Prata</h3>
+        <p>Fluxo em pasta para soldas de prata e Foscoper. Remove oxidação e melhora a fluidez, garantindo soldagem perfeita e sem falhas.</p>
+        <a class="btn" href="https://wa.me/5519971667714?text=Olá,%20tenho%20interesse%20no%20Fluxo%20de%20Solda%20Prata" target="_blank">Comprar no WhatsApp</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Fale Conosco</h2>
+    <p>Tem dúvidas ou deseja solicitar um orçamento? Converse agora com nosso time especializado pelo WhatsApp.</p>
+    <a class="btn" href="https://wa.me/5519971667714?text=Olá,%20gostaria%20de%20mais%20informações" target="_blank">Chamar no WhatsApp</a>
+  </section>
+
+  <footer>
+    <p>©️ 2025 PRATA FORTE - Todos os direitos reservados</p>
+    <p>📧 Contato: <a href="mailto:Gi_bian@hotmail.com">Gi_bian@hotmail.com</a></p>
+  </footer>
+
+</body>
+</html>
+
+  
